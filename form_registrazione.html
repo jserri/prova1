@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form registrazione</title>
+
+    <style>
+        input {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <form action="demo.php" method="post">
+                <h2>Registrazione Nuovo Utente</h2>
+                <p>I campi contrassegnati da asterisco sono obbligatori <strong><abbr title="required">*</abbr></strong>.</p>
+                <hr>
+                <!--Campo Username-->
+                <label for="email"><span>Email: </span><strong><abbr title="required">*</abbr></strong></label>
+                <input type="email" name="email" id="email" required autofocus><br>
+                <!--Campo Password-->
+                <label for="password"><span>Password: </span><strong><abbr title="required">*</abbr></strong></label>
+                <input type="password" minlength="8" name="password" id="password" required><br>
+                <!--Campo Nome-->
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome"><br>
+                <!--Campo Cognome-->
+                <label for="cognome">Cognome:</label>
+                <input type="text" name="cognome" id="cognome"><br>
+                <!--Campo Data di Nascita-->
+                <label for="compleanno">Data di Nascita:</label>
+                <input type="date" name="compleanno" id="compleanno"><br>
+                <!--Campo Numero di Telefono-->
+                <label for="telefono">Telefono:</label>
+                <input type="tel" maxlength="10" name="telefono" id="telefono"><br>
+                <!--Campo Selettore-->
+                <label for="abbonamento">Scegli L'abbonamento</label>
+                <select name="abbonamento" id="abbonamento">
+                    <optgroup label="Senza Telefono">
+                        <option value="gratis">Gratis</option>
+                    </optgroup>
+                    <optgroup label="Con Telefono">
+                        <option value="pro">Pro: 5€</option>
+                        <option value="super">Super: 10€</option>
+                        <option value="maxi">Maxi: 15€</option>
+                    </optgroup>
+                </select>
+                <br>
+                <!--Campo Checkbox-->
+                <label for="vantaggi">Clicca qui per confermare i Vantaggi PRO</label>
+                <input type="checkbox" name="vantaggi" id="vantaggi">
+                <hr>
+        </section>
+        <section> 
+                <!--Campo Carta di credito-->
+                <h3>Pagamento</h3>
+                <label for="numero-carta">Numero Carta</label>
+                <input type="text" maxlength="16" name="numero-carta" id="numero-carta" placeholder="Numero Carta" >
+                    <span>
+                        <label for="cvc">CVC</label>
+                        <input type="text" maxlength="3" name="cvc" id="cvc">
+                    </span><br>
+                <label for="scadenza">Scadenza</label>
+                <input type="month" name="scadenza" id="scadenza" placeholder="MM/YYYY"><br>
+                <!--Fatturazione-->
+                <label for="verifica">Clicca se l'indirizzo di fatturazione è diverso dall'acquirente</label>
+                <input type="checkbox" name="verifica" id="verifica"><br>
+                <label for="nome-indirizzo">Nome: </label>
+                <input type="text" name="nome-indirizzo" id="nome-indirizzo">
+                    <span>
+                        <label for="cognome">Cognome: </label>
+                        <input type="text" name="cognome" id="cognome">
+                    </span><br>
+                <label for="indirizzo">Via: </label>
+                <input type="text" name="indirizzo" id="indirizzo">
+                    <span>
+                        <label for="cap">Cap :</label>
+                        <input type="text" maxlength="5" pattern="[0-9]+" name="cap" id="cap">
+                    </span><br>
+                <label for="citta">Città: </label>
+                <input type="text" name="citta" id="citta">
+                    <span>
+                        <label for="nazione">Nazionalità: </label>
+                        <input type="text" name="nazione" id="nazione">
+                    </span>
+                <hr>
+                <button type="submit">Acquista</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

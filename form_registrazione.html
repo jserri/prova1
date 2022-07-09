@@ -27,16 +27,16 @@
                 <input type="password" minlength="8" name="password" id="password" required><br>
                 <!--Campo Nome-->
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome"><br>
+                <input type="text" name="nome" id="nome" required><br>
                 <!--Campo Cognome-->
                 <label for="cognome">Cognome:</label>
-                <input type="text" name="cognome" id="cognome"><br>
+                <input type="text" name="cognome" id="cognome" required><br>
                 <!--Campo Data di Nascita-->
                 <label for="compleanno">Data di Nascita:</label>
-                <input type="date" name="compleanno" id="compleanno"><br>
+                <input type="date" name="compleanno" id="compleanno" required><br>
                 <!--Campo Numero di Telefono-->
                 <label for="telefono">Telefono:</label>
-                <input type="tel" maxlength="10" name="telefono" id="telefono"><br>
+                <input type="tel" maxlength="10" name="telefono" id="telefono" required><br>
                 <!--Campo Selettore-->
                 <label for="abbonamento">Scegli L'abbonamento</label>
                 <select name="abbonamento" id="abbonamento">
@@ -59,13 +59,13 @@
                 <!--Campo Carta di credito-->
                 <h3>Pagamento</h3>
                 <label for="numero-carta">Numero Carta</label>
-                <input type="text" maxlength="16" name="numero-carta" id="numero-carta" placeholder="Numero Carta" >
+                <input type="text" maxlength="16" pattern="[0-9]+" name="numero-carta" id="numero-carta" placeholder="Numero Carta" required >
                     <span>
                         <label for="cvc">CVC</label>
-                        <input type="text" maxlength="3" name="cvc" id="cvc">
+                        <input type="text" maxlength="3" pattern="[0-9]+" name="cvc" id="cvc" required>
                     </span><br>
                 <label for="scadenza">Scadenza</label>
-                <input type="month" name="scadenza" id="scadenza" placeholder="MM/YYYY"><br>
+                <input type="month" name="scadenza" id="scadenza" placeholder="MM/YYYY" required><br>
                 <!--Fatturazione-->
                 <label for="verifica">Clicca se l'indirizzo di fatturazione è diverso dall'acquirente</label>
                 <input type="checkbox" name="verifica" id="verifica"><br>
